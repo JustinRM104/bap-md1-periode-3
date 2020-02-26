@@ -18,9 +18,47 @@ body {
   transition-duration: 0.4s;
 }
 
-.top:hover {border: 1em solid white; background: black; transition-duration: 0.4s;}
-.top:hover h1 {color: white; transition-duration: 0.4s;}
-.top:hover h2 {color: white; transition-duration: 0.4s;}
-
 .top h1 {text-decoration: overline; transition-duration: 0.4s;}
 .top h2 {text-decoration: underline; margin-top: -1em; transition-duration: 0.4s;}
+
+nav {margin: 0 auto; margin-top: 2.5em; margin-bottom: 2.5em; text-align: center; width: 50%;}
+nav a {
+  display: inline-block;
+  height: 100%;
+
+  padding: 1em;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+
+  border: 0.25em solid black;
+  transition-duration: 0.4s;
+}
+nav a:hover {
+  background: black;
+  color: white;
+  border: 0.25em solid white;
+  text-decoration: underline;
+  transition-duration: 0.4s;
+}
+
+.trackList {
+  margin: 0 auto;
+  width: 90%;
+
+  display: grid;
+  grid-template-columns: repeat(repeat(auto-fill, minmax(300px, 1fr)));
+}
+
+section {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  text-shadow: 0 0 3px black;
+  transition-duration: 0.4s;
+}

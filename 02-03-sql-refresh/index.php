@@ -1,3 +1,20 @@
+<?php
+$hostname='localhost';
+$username='root';
+$password='';
+$database='tracksdatabase';
+
+try {
+  $connection = new PDO('mysql:host='.$hostname.';dbname='.$database, $username, $password);
+  $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  $result = $connection->query("SELECT * FROM afspeellijst;");
+}
+catch(PDOException $e) {
+  echo "Something gone wrong while connecting to the database.";
+  exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="nl" dir="ltr">
   <head>
@@ -16,7 +33,23 @@
       <h2>Door Justin</h2>
     </div>
 
-    
+    <nav>
+      <a href="#">Voeg nummer toe</a>
+      <a href="#">Nummer bijwerken</a>
+      <a href="#">Nummer verwijderen</a>
+    </nav>
+
+    <div class="trackList">
+      <?php
+      foreach ($result as $key => $row) {
+        ?>
+        <section>
+          
+        </section>
+        <?php
+      }
+      ?>
+    </div>
 
   </body>
 </html>
