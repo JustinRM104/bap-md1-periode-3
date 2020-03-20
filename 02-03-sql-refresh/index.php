@@ -34,7 +34,7 @@ catch(PDOException $e) {
     </div>
 
     <nav>
-      <a href="#">Voeg nummer toe</a>
+      <a href="add.php">Voeg nummer toe</a>
       <a href="#">Nummer bijwerken</a>
       <a href="#">Nummer verwijderen</a>
     </nav>
@@ -44,7 +44,7 @@ catch(PDOException $e) {
       foreach ($result as $key => $row) {
         ?>
         <section>
-          
+
         </section>
         <?php
       }

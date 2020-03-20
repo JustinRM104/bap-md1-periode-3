@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 1em;
+  color: white;
+}
+
+.bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://www.jakpost.travel/wimages/large/85-851024_old-street-graffiti-wall-paper-hd-4k-high.jpg");
+  background-size: 1920px 1080px;
+  z-index: -1;
+}
+
+#box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 1em;
+  grid-auto-rows: 350px 350px;
+  grid-auto-flow: dense;
+}
+
+#box section h2 {
+  margin: 0;
+  text-shadow: 3px 3px 0px black;
+}
+
+#box section h3 {
+  margin: 0;
+  margin-left: .25rem;
+  text-shadow: 3px 3px 0px black;
+  font-weight: lighter;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.2s;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none-ms-user-select: none;
+  user-select: none;
+}
+
+#box section:hover img {
+  filter: brightness(20%);
+}
+
+#box section {
+  position: relative;
+  border: .5em solid black;
+}
+
+#box section:hover .info {
+  filter: sepia(100%);
+}
+
+.info {
+  position: absolute;
+  left: .5em;
+  top: .5em;
+}
+
+.buttons {
+  margin-top: 5em;
+}
+
+.buttons a, .submit, .edit {
+  display: inline-block;
+  height: 100%;
+
+  padding: 1em;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  background: white;
+  cursor: pointer;
+
+  border: 0.25em solid black;
+  transition-duration: 0.4s;
+}
+
+.buttons a:hover, .submit:hover, .edit {
+  background: black;
+  color: white;
+  border: 0.25em solid white;
+  text-decoration: underline;
+  transition-duration: 0.4s;
+}
+
+.submit {
+  margin-top: 2em;
+}
+
+form {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+form input {
+  width: 25em;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: .25em;
+
+  padding: 1em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+  color: black;
+  background: white;
+  border: 0.25em solid black;
+  outline: none;
+}
+
+.back {
+  display: block;
+  height: 100%;
+  width: 10em;
+  margin: 0 auto;
+
+  padding: 1em;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  background: white;
+  cursor: pointer;
+
+  border: 0.25em solid black;
+  transition-duration: 0.4s;
+}
+
+.back:hover {
+  background: black;
+  color: white;
+  border: 0.25em solid white;
+  text-decoration: underline;
+  transition-duration: 0.4s;
+}
