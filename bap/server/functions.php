@@ -12,3 +12,9 @@ function dbConnect() {
   }
   return false;
 }
+
+function deleteTrack($id, $connection) {
+  $stmt = $connection->prepare("DELETE FROM playlist WHERE id=?");
+  $stmt->execute([$id]);
+  $deleted = $stmt->rowCount();
+}
